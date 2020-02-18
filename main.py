@@ -16,6 +16,10 @@ def guessingGame():
 
         if guess != number:
             print("\n\nNice try, keep going\n\n")
+        elif guess < number:
+            print("\n\nThat number is a tad low\n\n")
+        elif guess > number:
+            print("\n\nThat number is a tad high\n\n")
         else:
             print("\n\nCongrats, you chose the right number!\n\n")
             break
