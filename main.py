@@ -2,7 +2,7 @@ import random
 import sys
 
 
-def guessingGame(answer, guess):
+def guessingGame(number, guess):
     while true:
 
         try:
