@@ -1,8 +1,5 @@
 import random
 import sys
-import re
-
-# pattern = re.search(r"(.[a-zA-Z]+)")
 
 
 def guessingGame():
