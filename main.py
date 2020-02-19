@@ -2,7 +2,7 @@ import random
 import sys
 
 
-def guessingGame():
+def guessingGame(answer, guess):
     while true:
 
         try:
@@ -33,6 +33,6 @@ if __name__ == "__main__":
     true = True
     start = int(sys.argv[1])
     end = int(sys.argv[2])
-    number = random.randrange(start, end)
+    number = random.randrange(start, end)  # Selects the winning number
     name = input("\t\t\t\t\nHello stranger, whats your name? ")
     guessingGame()
