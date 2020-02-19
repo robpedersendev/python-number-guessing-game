@@ -1,28 +1,35 @@
 import random
 import sys
+import re
+
+# pattern = re.search(r"(.[a-zA-Z]+)")
 
 
 def guessingGame():
     while true:
 
         try:
-            guess = int(
-                input(f"Number guesser.\t\t\n {name} choose a number between {start} and {end}. Enter guess? : "))
+            guess = input(
+                f"Number guesser.\t\t\n {name} choose a number between "
+                f"{start} and {end}. Enter guess? : ")
+            guess = int(guess)
+            if guess < number:
+                print("\n\nThat number is a tad low\n\n")
+            elif guess > number:
+                print("\n\nThat number is a tad high\n\n")
+            else:
+                print("\n\nCongrats, you chose the right number!\n\n")
+                break
+
         except (TypeError, ValueError):
-            print("Im sorry, please try again")
+            print("Sorry, numbers only please")
+            guess = str(f"\'{guess}\' Which is an invalid character")
+            continue
+        except (UnboundLocalError):
+            print("Sorry, numbers only please")
             continue
         finally:
             print(f"{name}, your last successful guess was {guess}")
-
-        if guess != number:
-            print("\n\nNice try, keep going\n\n")
-        elif guess < number:
-            print("\n\nThat number is a tad low\n\n")
-        elif guess > number:
-            print("\n\nThat number is a tad high\n\n")
-        else:
-            print("\n\nCongrats, you chose the right number!\n\n")
-            break
 
 
 if __name__ == "__main__":
