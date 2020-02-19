@@ -5,10 +5,10 @@ import main
 class TestMain(unittest.TestCase):
     def test_input(self):
         true = True
-        answer = 5
+        number = 5
         guess = 5
-        result = main.guessingGame(answer, guess)
-        self.assertTrue(result)
+        result = main.guessingGame(number, guess)
+        self.assertEqual(result)
 
 
 if __name__ == "__main__":
